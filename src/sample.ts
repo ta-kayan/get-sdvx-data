@@ -24,15 +24,18 @@ var cheerio = require('cheerio')
         credentials: 'include',
         referrerPolicy: 'strict-origin-when-cross-origin'
     });
-    console.log('response', await response);
+    // console.log('response', await response);
     const arrayBuffer = await response.arrayBuffer();
     const text = new TextDecoder('windows-31j').decode(arrayBuffer);
-    console.log('response.text', text);
+    // console.log('response.text', text);
 
     let domparser = new DOMParser();
     let doc = domparser.parseFromString(text, 'text/html');
     const $ = cheerio.load(text);
-    const table = $('table');
-    console.log(table);
+    const titles_arr: any[] = [];
+    $('table', '.eff_sc_tbl').each((i: number, elem: any) => {
+        titles_arr[i] = $(elem).text();
+    })
+    console.log(titles_arr);
     
 })()
