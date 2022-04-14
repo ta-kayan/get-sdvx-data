@@ -33,7 +33,8 @@ var cheerio = require('cheerio')
     let doc = domparser.parseFromString(text, 'text/html');
     const $ = cheerio.load(text);
     const titles_arr: any[] = [];
-    $('table').each((i: number, elem: any) => {
+    $('table', 'tr').each((i: number, elem: any) => {
+
         titles_arr.push($(elem).text());
     })
     console.log('titles_arr', titles_arr);
