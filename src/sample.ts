@@ -24,7 +24,7 @@ var cheerio = require('cheerio')
         credentials: 'include',
         referrerPolicy: 'strict-origin-when-cross-origin'
     });
-    // console.log('response', await response);
+    console.log('response', await response);
     const arrayBuffer = await response.arrayBuffer();
     const text = new TextDecoder('windows-31j').decode(arrayBuffer);
     console.log('response.text', text);
