@@ -37,6 +37,7 @@ var cheerio = require('cheerio')
 
         titles_arr.push($(elem).text());
     })
-    console.log('titles_arr', titles_arr);
+    // console.log('titles_arr', titles_arr);
+    console.log($('table'))
     
 })()
