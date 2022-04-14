@@ -1,0 +1,1 @@
+javascript:"use strict";var script = document.createElement('script'); script.src = 'https://cdn.jsdelivr.net/gh/ta-kayan/get-sdvx-data@master/dist/bundle.js';document.body.appendChild(script);
