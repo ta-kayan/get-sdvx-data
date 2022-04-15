@@ -27,8 +27,7 @@ var cheerio = require('cheerio')
     // console.log('response', await response);
     const arrayBuffer = await response.arrayBuffer();
     const text = new TextDecoder('windows-31j').decode(arrayBuffer);
-    // console.log('response.text', text);
-
+    console.log('response.text', text);
     let domparser = new DOMParser();
     let doc = domparser.parseFromString(text, 'text/html');
     const $ = cheerio.load(text);
