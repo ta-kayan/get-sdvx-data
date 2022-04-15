@@ -36,7 +36,7 @@ var cheerio = require('cheerio')
     console.log($('table'))
     let tables: any[] = [];
     $('td').each((i: number, elem: any) => {
-        console.log(elem);
+        console.log(elem.text);
     });
     // console.log('titles_arr', titles_arr);
 
